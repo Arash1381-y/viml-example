@@ -1,6 +1,6 @@
-#include <flexisim/devices/dummy_device.hpp>
-#include <flexisim/device.hpp>
 #include <flexisim/kernel.hpp>
+#include <flexisim/device.hpp>
+#include <flexisim/devices/dummy_device.hpp>
 
 
 int main() {
