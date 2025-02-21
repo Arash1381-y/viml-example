@@ -1,0 +1,41 @@
+Frontend:
+  impl: ReadWriteTrace
+  clock_ratio: 1
+
+  Translation:
+    impl: NoTranslation
+    max_addr: 2147483648
+
+
+MemorySystem:
+  impl: GenericDRAM
+  clock_ratio: 1
+  DRAM:
+    impl: HBM_PIM
+    org:
+      preset: HBM_4Gb
+      channel: 64
+      rank: 1
+    timing:
+      preset: HBM_PIM
+
+  Controller:
+    impl: Generic
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    PimOrg:
+      impl: Aquabolt
+      count: 8
+      PimUnit:
+        impl: AquaboltUnit
+
+
+
+    Plugins:
+
+
+  AddrMapper:
+    impl: Manual
+

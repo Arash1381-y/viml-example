@@ -1,0 +1,5 @@
+type: SamsungPim
+name: d1
+frequency: 1
+sim-node: ramulator2
+config: "./node.yaml"
